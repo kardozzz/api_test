@@ -44,8 +44,9 @@ tasks.withType(Test) {
     useJUnitPlatform()
     systemProperties(System.getProperties())
 
-task runing_tests(type: Test) {
-    useJUnitPlatform {
-        includeTags("Regress")
+    task runing_tests(type: Test) {
+        useJUnitPlatform {
+            includeTags("Regress")
+        }
     }
 }
