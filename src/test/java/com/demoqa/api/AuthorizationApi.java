@@ -1,5 +1,6 @@
 package com.demoqa.api;
 
+import com.demoqa.data.LoginData;
 import com.demoqa.models.LoginRequestModel;
 import com.demoqa.models.LoginResponseModel;
 
@@ -12,7 +13,7 @@ public class AuthorizationApi {
     public static LoginResponseModel getAuthorizationCookie() {
         LoginResponseModel response;
         LoginRequestModel request = new LoginRequestModel();
-        data.LoginData loginData = new data.LoginData();
+        LoginData loginData = new LoginData();
         request.setUserName(loginData.getUserName());
         request.setPassword(loginData.getPassword());
 

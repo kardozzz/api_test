@@ -23,10 +23,10 @@ public class BookStoreTests extends TestBase {
 
         step("Очистить корзину с книгами", BookStoreApi::deleteAllBooksInCart);
 
-        step("Добавить определенную книгу в корзину", () ->
+        step("Добавить книгу в корзину", () ->
                 api.BookStoreApi.addBookToList("9781449331818"));
 
-        step("Удалить эту книгу", () -> {
+        step("Удалить добавленную книгу", () -> {
             ProfilePage.openPage();
             ProfilePage.deleteBook();
         });

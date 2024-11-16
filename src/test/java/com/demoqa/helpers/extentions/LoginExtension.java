@@ -2,6 +2,7 @@ package com.demoqa.helpers.extentions;
 
 import com.demoqa.api.AuthorizationApi;
 import com.demoqa.data.AuthData;
+import com.demoqa.data.LoginData;
 import com.demoqa.models.LoginResponseModel;
 import org.junit.jupiter.api.extension.BeforeEachCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
@@ -17,7 +18,7 @@ public class LoginExtension implements BeforeEachCallback {
 
     @Override
     public void beforeEach(ExtensionContext context) {
-        data.LoginData loginData = new data.LoginData();
+        LoginData loginData = new LoginData();
         LoginResponseModel cookies = AuthorizationApi.getAuthorizationCookie();
 
         AuthData.USER_ID = cookies.getUserId();
