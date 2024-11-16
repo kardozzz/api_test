@@ -17,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class BookStoreTests extends TestBase {
     @Tag("Regress")
     @Test
-    @WithLogin.WithLogin
+    @WithLogin
     @DisplayName("Проверка успешного удаления товара из списка")
     void successfulDeleteBookTest() {
 
