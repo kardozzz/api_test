@@ -13,9 +13,9 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Tag("API")
 @DisplayName("Тесты книжного магазина с сайта demoqa.com")
 public class BookStoreTests extends TestBase {
-    @Tag("API")
     @Test
     @WithLogin
     @DisplayName("Проверка успешного удаления товара из списка")
