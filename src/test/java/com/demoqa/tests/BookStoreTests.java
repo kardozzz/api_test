@@ -3,7 +3,7 @@ package com.demoqa.tests;
 
 import api.BookStoreApi;
 import com.demoqa.api.AccountApi;
-import com.demoqa.helpers.extentions.WitchLogin;
+import com.demoqa.helpers.extentions.WithLogin;
 import com.demoqa.models.GetListBoookResponseModel;
 import com.demoqa.pages.ProfilePage;
 import org.junit.jupiter.api.DisplayName;
@@ -17,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class BookStoreTests extends TestBase {
     @Tag("Regress")
     @Test
-    @WitchLogin.WithLogin
+    @WithLogin.WithLogin
     @DisplayName("Проверка успешного удаления товара из списка")
     void successfulDeleteBookTest() {
 

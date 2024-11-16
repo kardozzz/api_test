@@ -39,8 +39,11 @@ dependencies {
 }
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
-
 }
+tasks.withType(Test) {
+    useJUnitPlatform()
+    systemProperties(System.getProperties())
+
 task runing_tests(type: Test) {
     useJUnitPlatform {
         includeTags("Regress")

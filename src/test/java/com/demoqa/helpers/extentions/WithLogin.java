@@ -7,7 +7,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-public class WitchLogin {
+public class WithLogin {
     @ExtendWith(LoginExtension.class)
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.METHOD)
