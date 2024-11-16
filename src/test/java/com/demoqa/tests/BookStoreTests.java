@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("Тесты книжного магазина с сайта demoqa.com")
 public class BookStoreTests extends TestBase {
-    @Tag("Regress")
+    @Tag("API")
     @Test
     @WithLogin
     @DisplayName("Проверка успешного удаления товара из списка")
