@@ -18,7 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class BookStoreTests extends TestBase {
     @Test
     @WithLogin
-    @DisplayName("Проверка успешного удаления товара из списка")
+    @DisplayName("Проверить успешное удаления товара из списка")
     void successfulDeleteBookTest() {
 
         step("Очистить корзину с книгами", BookStoreApi::deleteAllBooksInCart);
