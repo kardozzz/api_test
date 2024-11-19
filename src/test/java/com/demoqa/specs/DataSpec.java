@@ -10,6 +10,13 @@ import static io.restassured.RestAssured.with;
 import static io.restassured.http.ContentType.JSON;
 
 public class DataSpec {
+
+    public static RequestSpecification requestSpec = with()
+            .filter(withCustomTemplates())
+            .contentType(JSON)
+            .log().all();
+
+
     public static ResponseSpecification response200 = new ResponseSpecBuilder()
             .expectStatusCode(200)
             .log(LogDetail.STATUS)
@@ -33,13 +40,6 @@ public class DataSpec {
             .log(LogDetail.ALL)
             .build();
 
-    public static RequestSpecification demoQaBookStoreWithJsonRequest = with()
-            .filter(withCustomTemplates())
-            .contentType(JSON)
-            .log().all();
 
-    public static RequestSpecification demoQaBookStoreCommonRequest = with()
-            .filter(withCustomTemplates())
-            .log().all();
 
 }

@@ -3,6 +3,6 @@ package com.demoqa.models;
 import lombok.Data;
 
 @Data
-public class LoginRequestModel {
+public class LoginRqModel {
     String userName, password;
 }

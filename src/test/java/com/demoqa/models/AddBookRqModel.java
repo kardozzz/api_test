@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class AddBookRequestModel {
+public class AddBookRqModel {
         String userId;
         List<BookModel> collectionOfIsbns;
     }
