@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class TestData {
-    String userName = "sokol",
-            password = "Sokol22@";
+    String userName = System.getProperty("userName"),
+            password = System.getProperty("password");
 }

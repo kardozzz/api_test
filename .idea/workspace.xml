@@ -6,29 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="22e42f0b-c976-4857-95c5-684f4a7cecb9" name="Changes" comment="fixed build.gradle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/api/BookApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/api/BookApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/api/AccountApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/api/AccountApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/data/AuthData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/data/LoginData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/helpers/extentions/LoginExtension.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/helpers/extentions/LoginExtension.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/models/GetBookListRsModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/models/GetBookListRsModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/models/GetLisBookRqModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/models/IsbnModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/models/IsbnModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/pages/ProfilePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/specs/DataSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/specs/DataSpec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/tests/BookStoreTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/tests/BookStoreTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/tests/TestBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/demoqa/tests/TestBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/api/AccountApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/api/AccountApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/api/BookApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/api/BookApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/data/AuthData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/AuthRsModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/data/LoginData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/data/TestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/LoginExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/LoginExtension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/GetBookListRsModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/GetBookListRsModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/IsbnModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/IsbnModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/ProfilePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/specs/DataSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/specs/DataSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/BookStoreTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/BookStoreTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,7 +290,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732098653134</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fixed build.gradle">
+      <option name="closed" value="true" />
+      <created>1732101676070</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732101676070</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
