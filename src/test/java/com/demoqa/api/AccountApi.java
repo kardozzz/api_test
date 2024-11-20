@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class AccountApi {
 
-    @Step("Авторизация пользователя с именем {0}")
+    @Step("Авторизация пользователя")
     public static LoginRsModel loginUser() {
         LoginRqModel request = new LoginRqModel();
         TestData testData = new TestData();
