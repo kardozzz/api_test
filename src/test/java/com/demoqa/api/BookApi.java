@@ -1,16 +1,17 @@
 package api;
 
-import com.demoqa.models.*;
+import com.demoqa.models.AddBookRqModel;
+import com.demoqa.models.DeleteBookRqModel;
+import com.demoqa.models.IsbnModel;
 import io.qameta.allure.Step;
-import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static com.demoqa.data.AuthData.token;
-import static com.demoqa.data.AuthData.userId;
+import static com.demoqa.models.AuthRsModel.token;
+import static com.demoqa.models.AuthRsModel.userId;
 import static com.demoqa.specs.DataSpec.*;
 import static io.restassured.RestAssured.given;
-//Добавить тесты на добавление и удаление конкретной книги, передать книги в женкинсе, и проверить удаление этой книги
+
 
 public class BookApi {
 
@@ -20,7 +21,7 @@ public class BookApi {
 
         given(requestSpec)
                 .header("Authorization", "Bearer " + token)
-                .queryParam("UserId",userId)
+                .queryParam("UserId", userId)
 
                 .when()
                 .delete("/BookStore/v1/Books")
@@ -32,7 +33,7 @@ public class BookApi {
     @Step
     public static void addBooksInProfile() {
         IsbnModel isbnModel = new IsbnModel();
-        AddBookRqModel request = new AddBookRqModel(userId,List.of(isbnModel));
+        AddBookRqModel request = new AddBookRqModel(userId, List.of(isbnModel));
 
         given(requestSpec)
                 .header("Authorization", "Bearer " + token)
@@ -47,7 +48,7 @@ public class BookApi {
     @Step
     public static void deleteBooksInProfile() {
         IsbnModel isbnModel = new IsbnModel();
-        DeleteBookRqModel request = new DeleteBookRqModel(isbnModel.getIsbn(),userId);
+        DeleteBookRqModel request = new DeleteBookRqModel(isbnModel.getIsbn(), userId);
         given(requestSpec)
                 .header("Authorization", "Bearer " + token)
                 .body(request)

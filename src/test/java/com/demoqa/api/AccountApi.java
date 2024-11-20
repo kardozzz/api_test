@@ -1,10 +1,10 @@
 package com.demoqa.api;
 
-import com.demoqa.data.AuthData;
-import com.demoqa.data.LoginData;
+import com.demoqa.models.AuthRsModel;
+import com.demoqa.data.TestData;
+import com.demoqa.models.GetBookListRsModel;
 import com.demoqa.models.LoginRqModel;
 import com.demoqa.models.LoginRsModel;
-import com.demoqa.models.GetBookListRsModel;
 import io.qameta.allure.Step;
 
 import static com.demoqa.specs.DataSpec.requestSpec;
@@ -17,41 +17,44 @@ public class AccountApi {
     @Step("Авторизация пользователя с именем {0}")
     public static LoginRsModel loginUser() {
         LoginRqModel request = new LoginRqModel();
-        LoginData loginData = new LoginData();
-        request.setUserName(loginData.getUserName()); // Установите имя пользователя
-        request.setPassword(loginData.getPassword()); // Установите пароль
+        TestData testData = new TestData();
+        request.setUserName(testData.getUserName());
+        request.setPassword(testData.getPassword());
 
         return given(requestSpec)
                 .contentType("application/json")
                 .body(request)
                 .when()
-                .post("/Account/v1/Login") // URL для авторизации
+                .post("/Account/v1/Login")
                 .then()
-                .spec(response200)// Проверка успешности
-                .extract().as(LoginRsModel.class); // Десериализация ответа
+                .spec(response200)
+                .extract().as(LoginRsModel.class);
     }
 
     @Step("Получить данные профиля пользователя")
     public static void getUserProfile() {
         given(requestSpec)
                 .contentType("application/json")
-                .header("Authorization", "Bearer " + AuthData.token) // Передаём токен
+                .header("Authorization", "Bearer " + AuthRsModel.token)
                 .when()
-                .get("/Account/v1/User/" + AuthData.userId) // URL запроса
+                .get("/Account/v1/User/" + AuthRsModel.userId)
                 .then()
-                .spec(response200);// Проверяем успешный ответ
+                .spec(response200);//
     }
 
-    @Step("Получить данные профиля пользователя")
-    public static GetBookListRsModel getUserProfileWithNotBook() {
-        return given(requestSpec)
+    @Step("Получить данные профиля пользователя с проверкой, что нет книг")
+    public static void verifyUserHasNoBooks() {
+        GetBookListRsModel userProfile = given(requestSpec)
                 .contentType("application/json")
-                .header("Authorization", "Bearer " + AuthData.token) // Токен для авторизации
+                .header("Authorization", "Bearer " + AuthRsModel.token)
                 .when()
-                .get("/Account/v1/User/" + AuthData.userId) // Запрос данных пользователя
+                .get("/Account/v1/User/" + AuthRsModel.userId)
                 .then()
-                .spec(response200) // Проверка успешного ответа
-                .extract().as(GetBookListRsModel.class); // Маппинг ответа в модель
+                .spec(response200)
+                .extract().as(GetBookListRsModel.class);
+
+        // Проверяем, что у пользователя нет книг
+        assertThat(userProfile.getBooks()).isEmpty();
     }
 }
 

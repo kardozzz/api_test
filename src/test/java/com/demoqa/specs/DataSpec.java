@@ -34,12 +34,4 @@ public class DataSpec {
             .log(LogDetail.ALL)
             .build();
 
-    public static ResponseSpecification response400 = new ResponseSpecBuilder()
-            .expectStatusCode(400)
-            .log(LogDetail.STATUS)
-            .log(LogDetail.ALL)
-            .build();
-
-
-
 }

@@ -1,10 +1,10 @@
-package com.demoqa.data;
+package com.demoqa.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 @Data
-public class AuthData {
+public class AuthRsModel {
     public static String userId, password, token, expires;
     private Boolean isActive;
     @JsonProperty("username")
