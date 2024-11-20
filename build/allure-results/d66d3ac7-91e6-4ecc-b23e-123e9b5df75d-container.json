@@ -1,0 +1,1 @@
+{"uuid":"d66d3ac7-91e6-4ecc-b23e-123e9b5df75d","name":"Тесты книжного магазина с сайта demoqa.com","children":["7ed7a1c5-081d-4251-8339-542ab4d32dfe"],"befores":[{"name":"setUp","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1731769938015,"stop":1731769938558}],"afters":[],"start":1731769937983,"stop":1731769972372}

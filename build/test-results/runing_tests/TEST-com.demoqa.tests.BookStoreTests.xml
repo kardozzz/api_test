@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Тесты книжного магазина с сайта demoqa.com" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-11-16T16:30:02" hostname="NOOB-MASTER69" time="2.2">
+  <properties/>
+  <testcase name="Проверка успешного удаления товара из списка" classname="com.demoqa.tests.BookStoreTests" time="2.2">
+    <failure message="java.lang.NullPointerException: Cannot invoke &quot;String.toLowerCase(java.util.Locale)&quot; because &quot;browser.name&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;String.toLowerCase(java.util.Locale)&quot; because &quot;browser.name&quot; is null
+	at com.codeborne.selenide.webdriver.WebDriverFactory.findFactory(WebDriverFactory.java:125)
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:110)
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:67)
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:72)
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133)
+	at com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:113)
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:48)
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:189)
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:174)
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:136)
+	at com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:113)
+	at com.codeborne.selenide.impl.StaticDriver.getAndCheckWebDriver(StaticDriver.java:65)
+	at com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:211)
+	at com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:70)
+	at com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:105)
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133)
+	at com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:104)
+	at com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:68)
+	at com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:31)
+	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:93)
+	at com.codeborne.selenide.Selenide.open(Selenide.java:53)
+	at com.demoqa.helpers.extentions.LoginExtension.lambda$beforeEach$0(LoginExtension.java:30)
+	at io.qameta.allure.Allure.lambda$step$0(Allure.java:113)
+	at io.qameta.allure.Allure.lambda$step$1(Allure.java:127)
+	at io.qameta.allure.Allure.step(Allure.java:181)
+	at io.qameta.allure.Allure.step(Allure.java:125)
+	at io.qameta.allure.Allure.step(Allure.java:112)
+	at com.demoqa.helpers.extentions.LoginExtension.beforeEach(LoginExtension.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <system-out><![CDATA[Request method:	POST
+Request URI:	https://demoqa.com/Account/v1/Login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userName": "sokol",
+    "password": "Sokol22@"
+}
+HTTP/1.1 200 OK
+Server: nginx/1.17.10 (Ubuntu)
+Date: Sat, 16 Nov 2024 16:30:02 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 357
+Connection: keep-alive
+X-Powered-By: Express
+ETag: W/"165-D3QaMTrliHjxR0DZ26v0AVtYdR0"
+
+{
+    "userId": "00a619cf-4134-48af-9eb2-1fed25a87cc1",
+    "username": "sokol",
+    "password": "Sokol22@",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InNva29sIiwicGFzc3dvcmQiOiJTb2tvbDIyQCIsImlhdCI6MTczMTc3MTU5NX0.krP7KV63RiVzqCDQOqh1Qwmu2wDsMc6QScjCzEtibbg",
+    "expires": "2024-11-23T15:39:55.000Z",
+    "created_date": "2024-11-16T13:35:17.000Z",
+    "isActive": false
+}
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+]]></system-err>
+</testsuite>
