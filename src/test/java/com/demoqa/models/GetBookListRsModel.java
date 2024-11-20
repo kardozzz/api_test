@@ -1,11 +1,13 @@
 package com.demoqa.models;
 
 import lombok.Data;
-import java.util.List;
 
+import java.util.ArrayList;
+import java.util.List;
 @Data
-public class GetBookListRsModel {
-        String userId,
-                username;
-        List<BookModel> books;
+    public class GetBookListRsModel {
+        private String userId; // ID пользователя
+        private String username; // Имя пользователя
+        private List<BookModel> books; // Список книг пользователя
     }
+

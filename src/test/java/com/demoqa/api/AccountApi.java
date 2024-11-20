@@ -4,11 +4,13 @@ import com.demoqa.data.AuthData;
 import com.demoqa.data.LoginData;
 import com.demoqa.models.LoginRqModel;
 import com.demoqa.models.LoginRsModel;
+import com.demoqa.models.GetBookListRsModel;
 import io.qameta.allure.Step;
 
 import static com.demoqa.specs.DataSpec.requestSpec;
 import static com.demoqa.specs.DataSpec.response200;
 import static io.restassured.RestAssured.given;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class AccountApi {
 
@@ -39,4 +41,17 @@ public class AccountApi {
                 .then()
                 .spec(response200);// Проверяем успешный ответ
     }
+
+    @Step("Получить данные профиля пользователя")
+    public static GetBookListRsModel getUserProfileWithNotBook() {
+        return given(requestSpec)
+                .contentType("application/json")
+                .header("Authorization", "Bearer " + AuthData.token) // Токен для авторизации
+                .when()
+                .get("/Account/v1/User/" + AuthData.userId) // Запрос данных пользователя
+                .then()
+                .spec(response200) // Проверка успешного ответа
+                .extract().as(GetBookListRsModel.class); // Маппинг ответа в модель
+    }
 }
+
