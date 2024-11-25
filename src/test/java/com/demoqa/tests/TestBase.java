@@ -12,6 +12,7 @@ public class TestBase {
     public static void setUp() {
         RestAssured.baseURI = "https://demoqa.com";
         Configuration.baseUrl = "https://demoqa.com";
+        Configuration.browser = "chrome";
 
 
     }

@@ -30,7 +30,7 @@ public class BookApi {
                 .spec(response204);
     }
 
-    @Step
+    @Step("Добавление книги в профиль")
     public static void addBooksInProfile() {
         IsbnModel isbnModel = new IsbnModel();
         AddBookRqModel request = new AddBookRqModel(userId, List.of(isbnModel));
@@ -45,7 +45,7 @@ public class BookApi {
                 .spec(response201);
     }
 
-    @Step
+    @Step("Удаление книги из профиля")
     public static void deleteBooksInProfile() {
         IsbnModel isbnModel = new IsbnModel();
         DeleteBookRqModel request = new DeleteBookRqModel(isbnModel.getIsbn(), userId);

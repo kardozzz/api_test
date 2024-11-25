@@ -6,6 +6,6 @@ import lombok.Data;
 @Data
 
 public class IsbnModel {
-       private String isbn = System.getProperty("isbnNumber");
+       private String isbn = "9781449325862";
     }
 
