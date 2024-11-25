@@ -1,43 +1,46 @@
 package com.demoqa.api;
 
 import com.demoqa.models.AuthRsModel;
-import com.demoqa.data.TestData;
 import com.demoqa.models.GetBookListRsModel;
 import com.demoqa.models.LoginRqModel;
 import com.demoqa.models.LoginRsModel;
 import io.qameta.allure.Step;
 
+import static com.demoqa.helpers.extentions.LoginExtension.cookies;
 import static com.demoqa.specs.DataSpec.requestSpec;
 import static com.demoqa.specs.DataSpec.response200;
+import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class AccountApi {
 
-    @Step("Авторизация пользователя")
-    public static LoginRsModel loginUser() {
-        LoginRqModel request = new LoginRqModel();
-        TestData testData = new TestData();
-        request.setUserName(testData.getUserName());
-        request.setPassword(testData.getPassword());
+    public static LoginRsModel getAuthorizationCookie() {
+        LoginRsModel response;
+        LoginRqModel request = new LoginRqModel("sokol","Sokol22@");
 
-        return given(requestSpec)
-                .contentType("application/json")
-                .body(request)
-                .when()
-                .post("/Account/v1/Login")
-                .then()
-                .spec(response200)
-                .extract().as(LoginRsModel.class);
+        response = step("Сделать запрос логина, и записать ответ", () ->
+                given(requestSpec)
+                        .body(request)
+
+                        .when()
+                        .post("/Account/v1/Login")
+
+                        .then()
+                        .spec(response200)
+                        // .statusCode(200)
+                        .extract().as(LoginRsModel.class));
+
+        return response;
     }
 
     @Step("Получить данные профиля пользователя")
     public static void getUserProfile() {
         given(requestSpec)
                 .contentType("application/json")
-                .header("Authorization", "Bearer " + AuthRsModel.token)
+                .header("Authorization", "Bearer " + cookies.getToken())
                 .when()
-                .get("/Account/v1/User/" + AuthRsModel.userId)
+                .get("/Account/v1/User/" + cookies.getUserId())
                 .then()
                 .spec(response200);//
     }
@@ -46,9 +49,9 @@ public class AccountApi {
     public static void verifyUserHasNoBooks() {
         GetBookListRsModel userProfile = given(requestSpec)
                 .contentType("application/json")
-                .header("Authorization", "Bearer " + AuthRsModel.token)
+                .header("Authorization", "Bearer " + cookies.getToken())
                 .when()
-                .get("/Account/v1/User/" + AuthRsModel.userId)
+                .get("/Account/v1/User/" + cookies.getUserId())
                 .then()
                 .spec(response200)
                 .extract().as(GetBookListRsModel.class);

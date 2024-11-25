@@ -13,6 +13,7 @@ public class TestBase {
         RestAssured.baseURI = "https://demoqa.com";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browser = "chrome";
+        Configuration.pageLoadStrategy = "eager";
 
 
     }

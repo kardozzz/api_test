@@ -1,28 +1,37 @@
 package com.demoqa.helpers.extentions;
 
 import com.demoqa.api.AccountApi;
-import com.demoqa.models.AuthRsModel;
 import com.demoqa.models.LoginRsModel;
-import io.qameta.allure.Step;
+import org.openqa.selenium.Cookie;
 import org.junit.jupiter.api.extension.BeforeEachCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static io.qameta.allure.Allure.step;
+
 public class LoginExtension implements BeforeEachCallback {
+    public static LoginRsModel cookies;
 
     @Override
     public void beforeEach(ExtensionContext context) {
+        cookies = AccountApi.getAuthorizationCookie();
 
-        performLogin();
+        step("Добавить cookie (в ответе) из браузера", () -> {
+            open("/favicon.ico");
+            getWebDriver().manage().addCookie(new Cookie("userId", cookies.getUserId()));
+            getWebDriver().manage().addCookie(new Cookie("expires", cookies.getExpires()));
+            getWebDriver().manage().addCookie(new Cookie("token", cookies.getToken()));
+        });
+
+        step("Проверить успешный вход в учетную запись", () -> {
+                    open("/profile");
+                    $("#userName-value").shouldHave(text("sokol"));
+                }
+        );
+
     }
 
-    @Step("Выполнить логин через API и сохранить токен")
-    private void performLogin() {
-        // Выполняем логин через API
-        LoginRsModel loginResponse = AccountApi.loginUser();
-
-        // Сохраняем авторизационные данные в AuthRsModel
-        AuthRsModel.userId = loginResponse.getUserId();
-        AuthRsModel.expires = loginResponse.getExpires();
-        AuthRsModel.token = loginResponse.getToken();
-    }
 }
+

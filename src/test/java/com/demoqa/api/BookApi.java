@@ -9,6 +9,7 @@ import java.util.List;
 
 import static com.demoqa.models.AuthRsModel.token;
 import static com.demoqa.models.AuthRsModel.userId;
+import static com.demoqa.helpers.extentions.LoginExtension.cookies;
 import static com.demoqa.specs.DataSpec.*;
 import static io.restassured.RestAssured.given;
 
@@ -16,12 +17,12 @@ import static io.restassured.RestAssured.given;
 public class BookApi {
 
 
-    @Step
+    @Step("Удалить все книги у пользователя")
     public static void deleteAllBooksInProfile() {
 
         given(requestSpec)
-                .header("Authorization", "Bearer " + token)
-                .queryParam("UserId", userId)
+                .header("Authorization", "Bearer " + cookies.getToken() )
+                .queryParam("UserId", cookies.getUserId())
 
                 .when()
                 .delete("/BookStore/v1/Books")
@@ -33,10 +34,10 @@ public class BookApi {
     @Step("Добавление книги в профиль")
     public static void addBooksInProfile() {
         IsbnModel isbnModel = new IsbnModel();
-        AddBookRqModel request = new AddBookRqModel(userId, List.of(isbnModel));
+        AddBookRqModel request = new AddBookRqModel(cookies.getUserId(), List.of(isbnModel));
 
         given(requestSpec)
-                .header("Authorization", "Bearer " + token)
+                .header("Authorization", "Bearer " + cookies.getToken())
                 .body(request)
                 .when()
                 .post("BookStore/v1/Books")
@@ -48,9 +49,9 @@ public class BookApi {
     @Step("Удаление книги из профиля")
     public static void deleteBooksInProfile() {
         IsbnModel isbnModel = new IsbnModel();
-        DeleteBookRqModel request = new DeleteBookRqModel(isbnModel.getIsbn(), userId);
+        DeleteBookRqModel request = new DeleteBookRqModel(isbnModel.getIsbn(), cookies.getUserId());
         given(requestSpec)
-                .header("Authorization", "Bearer " + token)
+                .header("Authorization", "Bearer " + cookies.getToken())
                 .body(request)
 
                 .when()

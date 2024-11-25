@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22e42f0b-c976-4857-95c5-684f4a7cecb9" name="Changes" comment="fixed build.gradle">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/Attach.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/ProfilePage.java" afterDir="false" />
+    <list default="true" id="22e42f0b-c976-4857-95c5-684f4a7cecb9" name="Changes" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/api/AccountApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/api/AccountApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/api/BookApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/api/BookApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/IsbnModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/IsbnModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/BookStoreTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/BookStoreTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/LoginExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/LoginExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/WithLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/WithLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/LoginRqModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/LoginRqModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/LoginRsModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/LoginRsModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/specs/DataSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/specs/DataSpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +26,31 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="api_and_ui" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="api_and_ui" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -33,7 +60,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -56,24 +82,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.BookStoreTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BookStoreTests.successfulDeleteBookTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.api_and_ui [runing_tests].executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.BookStoreTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BookStoreTests.successfulAuthorization.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/project/api_and_ui/src/test/resources&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/project/api_and_ui/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.BookStoreTests.executor": "Run",
+    "Gradle.BookStoreTests.successfulAuthorization.executor": "Run",
+    "Gradle.BookStoreTests.successfulDeleteBookTest.executor": "Run",
+    "Gradle.api_and_ui [runing_tests].executor": "Debug",
+    "JUnit.BookStoreTests.executor": "Run",
+    "JUnit.BookStoreTests.successfulAuthorization.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/project/api_and_ui/src/test/resources",
+    "onboarding.tips.debug.path": "C:/project/api_and_ui/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\project\api_and_ui\src\test\resources" />
@@ -82,7 +109,7 @@
       <recent name="C:\project\api_and_ui" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BookStoreTests.successfulAuthorization">
+  <component name="RunManager" selected="Gradle.BookStoreTests.successfulAuthorization">
     <configuration name="BookStoreTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -107,7 +134,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="BookStoreTests.successfulDeleteBookTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BookStoreTests.successfulAuthorization" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -118,9 +145,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
+            <option value=":runing_tests" />
             <option value="--tests" />
-            <option value="&quot;com.demoqa.tests.BookStoreTests.successfulDeleteBookTest&quot;" />
+            <option value="&quot;com.demoqa.tests.BookStoreTests.successfulAuthorization&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -184,13 +211,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="api_and_ui.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="api_and_ui.main" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BookStoreTests.successfulAuthorization" />
+        <item itemvalue="Gradle.BookStoreTests" />
         <item itemvalue="JUnit.BookStoreTests.successfulAuthorization" />
         <item itemvalue="JUnit.BookStoreTests" />
         <item itemvalue="Gradle.api_and_ui [runing_tests]" />
-        <item itemvalue="Gradle.BookStoreTests" />
-        <item itemvalue="Gradle.BookStoreTests.successfulDeleteBookTest" />
       </list>
     </recent_temporary>
   </component>
@@ -339,7 +379,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732103847589</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fix">
+      <option name="closed" value="true" />
+      <created>1732520720687</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732520720687</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -357,21 +405,7 @@
     <MESSAGE value="fixed tests and TestBase.java" />
     <MESSAGE value="fixed WithLogin" />
     <MESSAGE value="fixed build.gradle" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed build.gradle" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/com/demoqa/tests/BookStoreTests.java</url>
-          <line>20</line>
-          <properties class="com.demoqa.tests.BookStoreTests" method="successfulAuthorization">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>

@@ -20,7 +20,6 @@ public class BookStoreTests extends TestBase {
     @DisplayName("Тесты с книгами")
     void successfulAuthorization() {
         BookApi.deleteAllBooksInProfile();
-        AccountApi.getUserProfile();
         BookApi.addBooksInProfile();
         ProfilePage.openPage();
         ProfilePage.deleteCertainBook();

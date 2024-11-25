@@ -9,6 +9,7 @@ import static com.demoqa.helpers.CustonAllureListener.withCustomTemplates;
 import static io.restassured.RestAssured.with;
 import static io.restassured.http.ContentType.JSON;
 
+
 public class DataSpec {
 
     public static RequestSpecification requestSpec = with()
