@@ -10,7 +10,7 @@ public class ProfilePage {
         open("/profile");
     }
 
-    public static void deleteCertainBook() {
+    public static void deleteUiBook() {
         $("#delete-record-undefined").scrollTo().click();
         $("#closeSmallModal-ok").scrollTo().click();
     }

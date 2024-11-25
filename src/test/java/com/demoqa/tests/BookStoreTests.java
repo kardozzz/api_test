@@ -21,18 +21,17 @@ public class BookStoreTests extends TestBase {
     @Test
     @WithLogin
     @DisplayName("Тесты с книгами")
-    void successfulAuthorization() {
+    void deleteBookTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        step("Удалить все книги из корзины", () ->
-                BookApi.deleteAllBooksInCart());
+        step("Удалить все книги из корзины", BookApi::deleteAllBooksInCart);
 
         step("Добавить книгу в корзину", () ->
                 BookApi.addBookToList("9781449325862"));
 
         step("Удалить добавленную книгу", () -> {
             ProfilePage.openPage();
-            ProfilePage.deleteCertainBook();
+            ProfilePage.deleteUiBook();
         });
 
         step("Проверить удаление книги через UI", () -> {
