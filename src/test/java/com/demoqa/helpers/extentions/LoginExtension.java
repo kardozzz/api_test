@@ -1,4 +1,4 @@
-package com.demoqa.helpers.extensions;
+package com.demoqa.helpers.extentions;
 
 import com.demoqa.api.AccountApi;
 import com.demoqa.models.LoginRsModel;
