@@ -18,7 +18,7 @@ public class LoginExtension implements BeforeEachCallback {
     public void beforeEach(ExtensionContext context) {
         cookies = AccountApi.getAuthorizationCookie();
 
-        step("Добавить cookie (в ответе) из браузера", () -> {
+        step("Добавить cookie (в ответ) из браузера", () -> {
             open("/favicon.ico");
             getWebDriver().manage().addCookie(new Cookie("userId", cookies.getUserId()));
             getWebDriver().manage().addCookie(new Cookie("expires", cookies.getExpires()));
@@ -27,7 +27,7 @@ public class LoginExtension implements BeforeEachCallback {
 
         step("Проверить успешный вход в учетную запись", () -> {
                     open("/profile");
-                    $("#userName-value").shouldHave(text("sokol"));
+                    $("#userName-value").shouldHave(text(System.getProperty("userName")));
                 }
         );
 

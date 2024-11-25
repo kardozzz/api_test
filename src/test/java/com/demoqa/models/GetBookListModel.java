@@ -4,8 +4,8 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class GetBookListRqModel {
+public class GetBookListModel {
         String userId,
                 username;
-        List<IsbnModel> books;
+        List<BookModel> books;
     }

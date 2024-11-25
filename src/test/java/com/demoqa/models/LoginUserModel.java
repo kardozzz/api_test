@@ -5,7 +5,6 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class AddBookRsModel {
-    String isbn;
+public class LoginUserModel {
+    String userName, password;
 }
-

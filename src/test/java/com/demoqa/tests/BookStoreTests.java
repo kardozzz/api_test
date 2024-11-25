@@ -1,14 +1,17 @@
 package com.demoqa.tests;
-
-
+import io.qameta.allure.selenide.AllureSelenide;
 import api.BookApi;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import com.demoqa.api.AccountApi;
 import com.demoqa.helpers.extentions.WithLogin;
+import com.demoqa.models.GetBookListModel;
 import com.demoqa.pages.ProfilePage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+import static io.qameta.allure.Allure.step;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 @Tag("API")
@@ -19,14 +22,33 @@ public class BookStoreTests extends TestBase {
     @WithLogin
     @DisplayName("Тесты с книгами")
     void successfulAuthorization() {
-        BookApi.deleteAllBooksInProfile();
-        BookApi.addBooksInProfile();
-        ProfilePage.openPage();
-        ProfilePage.deleteCertainBook();
-        ProfilePage.checkThatTheBookDeletedUI();
+        SelenideLogger.addListener("allure", new AllureSelenide());
 
+        step("Удалить все книги из корзины", () ->
+                BookApi.deleteAllBooksInCart());
 
+        step("Добавить книгу в корзину", () ->
+                BookApi.addBookToList("9781449325862"));
 
+        step("Удалить добавленную книгу", () -> {
+            ProfilePage.openPage();
+            ProfilePage.deleteCertainBook();
+        });
 
+        step("Проверить удаление книги через UI", () -> {
+            ProfilePage.openPage();
+            ProfilePage.checkThatTheBookDeletedUI();
+        });
+
+        step("Получить список книг в корзине через API", () -> {
+            GetBookListModel response = AccountApi.getListOfBooks();
+            assertThat(response.getBooks()).isNotNull();
+        });
+
+        step("Проверить удаление книги через API", () -> {
+            GetBookListModel response = AccountApi.getListOfBooks();
+            assertThat(response.getBooks()).isEmpty();
+        });
     }
+
 }
