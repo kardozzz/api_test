@@ -6,23 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="22e42f0b-c976-4857-95c5-684f4a7cecb9" name="Changes" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/api/AccountApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/api/AccountApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/api/BookApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/api/BookApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/data/TestData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/CustonAllureListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/CustomAllureListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/LoginExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/LoginExtension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/AddBookRsModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/AuthRsModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/BookModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/BookModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/DeleteBookRqModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/GetBookListRqModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/GetBookListModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/GetBookListRsModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/IsbnModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/IsbnModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/LoginRqModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/LoginUserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/specs/DataSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/specs/DataSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/BookStoreTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/BookStoreTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +195,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookStoreTests.successfulAuthorization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookStoreTests.deleteBookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="api_and_ui.test" />
       <extension name="coverage">
         <pattern>
@@ -222,7 +205,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
       <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.BookStoreTests" />
-      <option name="METHOD_NAME" value="successfulAuthorization" />
+      <option name="METHOD_NAME" value="deleteBookTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -246,7 +229,7 @@
         <item itemvalue="Gradle.api_and_ui [build]" />
         <item itemvalue="Gradle.BookStoreTests.successfulAuthorization" />
         <item itemvalue="Gradle.BookStoreTests" />
-        <item itemvalue="JUnit.BookStoreTests.successfulAuthorization" />
+        <item itemvalue="JUnit.BookStoreTests.deleteBookTest" />
         <item itemvalue="JUnit.BookStoreTests" />
       </list>
     </recent_temporary>
@@ -412,7 +395,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732540365284</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fix">
+      <option name="closed" value="true" />
+      <created>1732546885613</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732546885613</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fix">
+      <option name="closed" value="true" />
+      <created>1732547325632</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1732547325632</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
