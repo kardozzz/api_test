@@ -20,7 +20,7 @@ public class LoginExtension implements BeforeEachCallback {
 
         step("Добавить cookie (в ответ) из браузера", () -> {
             open("/favicon.ico");
-            getWebDriver().manage().addCookie(new Cookie("userId", cookies.getUserId()));
+            getWebDriver().manage().addCookie(new Cookie("userID", cookies.getUserId()));
             getWebDriver().manage().addCookie(new Cookie("expires", cookies.getExpires()));
             getWebDriver().manage().addCookie(new Cookie("token", cookies.getToken()));
         });
