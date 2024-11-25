@@ -58,4 +58,5 @@ task runing_tests(type: Test) {
     useJUnitPlatform {
         includeTags("API")
     }
+    systemProperties(System.getProperties())
 }

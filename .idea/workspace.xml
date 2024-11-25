@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="22e42f0b-c976-4857-95c5-684f4a7cecb9" name="Changes" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/LoginExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/LoginExtension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/WithLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/WithLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/LoginRsModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/LoginRsModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,7 @@
     "Gradle.BookStoreTests.successfulAuthorization.executor": "Run",
     "Gradle.BookStoreTests.successfulDeleteBookTest.executor": "Run",
     "Gradle.api_and_ui [build].executor": "Run",
-    "Gradle.api_and_ui [runing_tests].executor": "Debug",
+    "Gradle.api_and_ui [runing_tests].executor": "Run",
     "JUnit.BookStoreTests.executor": "Run",
     "JUnit.BookStoreTests.successfulAuthorization.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -111,7 +112,7 @@
       <recent name="C:\project\api_and_ui" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.api_and_ui [build]">
+  <component name="RunManager" selected="Gradle.api_and_ui [runing_tests]">
     <configuration name="BookStoreTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -182,20 +183,27 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="BookStoreTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="api_and_ui.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.demoqa.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.BookStoreTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="api_and_ui [runing_tests]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="runing_tests" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="BookStoreTests.deleteBookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="api_and_ui.test" />
@@ -228,11 +236,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.api_and_ui [runing_tests]" />
         <item itemvalue="Gradle.api_and_ui [build]" />
         <item itemvalue="Gradle.BookStoreTests.successfulAuthorization" />
         <item itemvalue="Gradle.BookStoreTests" />
         <item itemvalue="JUnit.BookStoreTests.deleteBookTest" />
-        <item itemvalue="JUnit.BookStoreTests" />
       </list>
     </recent_temporary>
   </component>
@@ -429,7 +437,31 @@
       <option name="project" value="LOCAL" />
       <updated>1732550214682</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="fix">
+      <option name="closed" value="true" />
+      <created>1732552624213</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1732552624213</updated>
+    </task>
+    <task id="LOCAL-00025" summary="fix">
+      <option name="closed" value="true" />
+      <created>1732552813420</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1732552813420</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fix">
+      <option name="closed" value="true" />
+      <created>1732553367150</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1732553367150</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

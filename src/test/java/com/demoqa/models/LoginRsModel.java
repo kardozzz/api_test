@@ -5,7 +5,9 @@ import lombok.Data;
 
 @Data
 public class LoginRsModel {
-    String userId, username, password, token, expires, created_date;
+    String userId, username, password, token, expires;
+    @JsonProperty("created_date")
+    private String createdDate;
     Boolean isActive;
 }
 
