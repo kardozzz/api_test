@@ -1,11 +1,12 @@
 package com.demoqa.tests;
-import io.qameta.allure.selenide.AllureSelenide;
-import api.BookApi;
+
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.demoqa.api.AccountApi;
+import com.demoqa.api.BookApi;
 import com.demoqa.helpers.extentions.WithLogin;
 import com.demoqa.models.GetBookListModel;
 import com.demoqa.pages.ProfilePage;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
