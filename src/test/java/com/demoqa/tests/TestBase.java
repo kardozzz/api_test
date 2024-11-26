@@ -50,13 +50,7 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
-        // Скачиваем и сохраняем логи браузера
-        LogEntries logEntries = getWebDriver().manage().logs().get(LogType.BROWSER);
-        for (LogEntry entry : logEntries) {
-            System.out.println("Browser log: " + entry.getMessage()); // Выводим в консоль
-        }
 
-        // Обычные вложения: скриншоты, страницы и видео
         Attach.screenshotAs("Last Screenshot");
         if (!Configuration.browser.equals("firefox")) {
             Attach.pageSource();
