@@ -10,10 +10,10 @@ import org.junit.jupiter.api.Test;
 import static com.demoqa.data.AuthData.*;
 
 @Tag("API")
-@DisplayName("Тесты Book Store")
+@DisplayName("Tests for book store")
 public class BookStoreTests extends TestBase {
 
-    @DisplayName("Удалить книгу (UI)")
+    @DisplayName("Delete book from UI")
     @Test
     @WithLogin
     void deleteBook() {

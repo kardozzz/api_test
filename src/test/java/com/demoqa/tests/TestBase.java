@@ -8,16 +8,12 @@ import io.restassured.RestAssured;
 import io.restassured.parsing.Parser;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.logging.LogEntries;
-import org.openqa.selenium.logging.LogEntry;
-import org.openqa.selenium.logging.LogType;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class TestBase {
 
@@ -27,10 +23,10 @@ public class TestBase {
         RestAssured.defaultParser = Parser.JSON;
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.browserSize = System.getProperty("browserSize");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.remote = System.getProperty("remoteURL");
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion");
+        Configuration.browserVersion = System.getProperty("browserVersion", "125.0");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -39,13 +35,13 @@ public class TestBase {
         ));
         Configuration.browserCapabilities = capabilities;
 
+
+    }
+
+    @BeforeEach
+    void preTest() {
         // Добавление AllureSelenide Listener
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-
-        // Включение логирования браузера (для Chrome)
-        ChromeOptions options = new ChromeOptions();
-        options.setCapability("goog:loggingPrefs", Map.of("browser", "ALL"));
-        Configuration.browserCapabilities = options;
     }
 
     @AfterEach

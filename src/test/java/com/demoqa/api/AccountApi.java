@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.given;
 
 public class AccountApi {
 
-    @Step("Получить авторизационные данные.")
+    @Step("Take authorization data")
     public static LoginRsModel getAuthData(String userName, String userPassword) {
 
         LoginRqModel request = new LoginRqModel();

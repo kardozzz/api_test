@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class BookApi {
-    @Step("Удалить все книги из корзины.")
+    @Step("Delete all book from collection.")
     public BookApi deleteAllBooks() {
 
         given(requestSpec)
@@ -28,7 +28,7 @@ public class BookApi {
         return this;
     }
 
-    @Step("Добавить книгу в корзину.")
+    @Step("Add book in collection.")
     public BookApi addBook(String isbn) {
 
         IsbnModel book = new IsbnModel();
@@ -48,7 +48,7 @@ public class BookApi {
         return this;
     }
 
-    @Step("Получить список всех книг пользователя.")
+    @Step("Get list all books from User.")
     public List<BookModel> getUserBooks() {
 
         AllBooksProfileRsModel response =
@@ -63,7 +63,7 @@ public class BookApi {
         return response.getBooks();
     }
 
-    @Step("Получить список всех книг магазина.")
+    @Step("Get all books in Store Book")
     public AllBooksFromStoreRsModel getAllBooks() {
 
         return given(requestSpec)
@@ -75,7 +75,7 @@ public class BookApi {
                 .extract().as(AllBooksFromStoreRsModel.class);
     }
 
-    @Step("Получить случайный ISBN.")
+    @Step("Get random ISBN.")
     public String getRandomIsbn() {
 
         AllBooksFromStoreRsModel booksFromStore = getAllBooks();
@@ -86,7 +86,7 @@ public class BookApi {
         return booksFromStore.getBooks().get(randomIndex).getIsbn();
     }
 
-    @Step("Проверить, что в корзине пусто (API).")
+    @Step("Check no book in collection (API).")
     public void checkResultOnApi() {
 
         BookApi booksApi = new BookApi();
