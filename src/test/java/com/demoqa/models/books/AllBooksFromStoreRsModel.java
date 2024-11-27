@@ -7,5 +7,5 @@ import java.util.List;
 @Data
 
 public class AllBooksFromStoreRsModel {
-        private List<BookModel> books;
+    private List<BookModel> books;
 }

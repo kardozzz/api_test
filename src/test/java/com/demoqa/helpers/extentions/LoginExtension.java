@@ -8,7 +8,6 @@ import org.openqa.selenium.Cookie;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-
 import static com.demoqa.data.AuthData.*;
 
 public class LoginExtension implements BeforeEachCallback {

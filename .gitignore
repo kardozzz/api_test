@@ -1,9 +1,10 @@
+# Default ignored files
 HELP.md
 build/
 !**/src/main/**
 !**/src/test/**
 
-### Intelij IDEA ###
+### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
@@ -11,9 +12,7 @@ build/
 
 ### Gradle ###
 .gradle
-/gradle
-gradlew.bat
-gradlew
+gradlew*
 
 ### Logs ###
 *.log

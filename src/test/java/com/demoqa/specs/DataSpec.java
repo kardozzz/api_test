@@ -9,14 +9,14 @@ import static io.restassured.RestAssured.with;
 import static io.restassured.filter.log.LogDetail.ALL;
 import static io.restassured.http.ContentType.JSON;
 
-public class DataSpec{
+public class DataSpec {
 
     public static final RequestSpecification requestSpec = with()
             .filter(withCustomTemplates())
             .contentType(JSON)
             .log().all();
 
-    public static ResponseSpecification responseSpec(int statusCode){
+    public static ResponseSpecification responseSpec(int statusCode) {
         return new ResponseSpecBuilder()
                 .expectStatusCode(statusCode)
                 .log(ALL)
