@@ -1,54 +1,38 @@
 package com.demoqa.tests;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
-import com.demoqa.api.AccountApi;
 import com.demoqa.api.BookApi;
 import com.demoqa.helpers.extentions.WithLogin;
-import com.demoqa.models.GetBookListModel;
 import com.demoqa.pages.ProfilePage;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static io.qameta.allure.Allure.step;
-import static org.assertj.core.api.Assertions.assertThat;
-
+import static com.demoqa.data.AuthData.*;
 
 @Tag("API")
-@DisplayName("Тесты книжного магазина с сайта demoqa.com")
+@DisplayName("Тесты Book Store")
 public class BookStoreTests extends TestBase {
 
+    @DisplayName("Удалить книгу (UI)")
     @Test
     @WithLogin
-    @DisplayName("Тесты с книгами")
-    void deleteBookTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+    void deleteBook() {
 
-        step("Удалить все книги из корзины", BookApi::deleteAllBooksInCart);
+        BookApi booksApi = new BookApi();
+        booksApi.deleteAllBooks();
 
-        step("Добавить книгу в корзину", () ->
-                BookApi.addBookToList("9781449325862"));
+        String isbn = booksApi.getRandomIsbn();
+        booksApi.addBook(isbn);
 
-        step("Удалить добавленную книгу", () -> {
-            ProfilePage.openPage();
-            ProfilePage.deleteUiBook();
-        });
+        ProfilePage profilePage = new ProfilePage();
+        profilePage
+                .openPage()
+                .checkAuthData(USER_NAME)
+                .checkBookInProfile(isbn)
+                .deleteBook(isbn)
+                .checkResultOnUi(isbn);
 
-        step("Проверить удаление книги через UI", () -> {
-            ProfilePage.openPage();
-            ProfilePage.checkThatTheBookDeletedUI();
-        });
-
-        step("Получить список книг в корзине через API", () -> {
-            GetBookListModel response = AccountApi.getListOfBooks();
-            assertThat(response.getBooks()).isNotNull();
-        });
-
-        step("Проверить удаление книги через API", () -> {
-            GetBookListModel response = AccountApi.getListOfBooks();
-            assertThat(response.getBooks()).isEmpty();
-        });
+        booksApi.checkResultOnApi();
     }
 
 }

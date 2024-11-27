@@ -1,59 +1,37 @@
 package com.demoqa.helpers.extentions;
 
 import com.demoqa.api.AccountApi;
-import com.demoqa.models.LoginRsModel;
-import org.openqa.selenium.Cookie;
+import com.demoqa.models.auth.LoginRsModel;
 import org.junit.jupiter.api.extension.BeforeEachCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
+import org.openqa.selenium.Cookie;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-import static io.qameta.allure.Allure.step;
+
+import static com.demoqa.data.AuthData.*;
 
 public class LoginExtension implements BeforeEachCallback {
-    private static final String COOKIES_KEY = "loginCookies";
 
     @Override
     public void beforeEach(ExtensionContext context) {
-        ExtensionContext.Store store = context.getStore(ExtensionContext.Namespace.create(getClass()));
 
-        step("Получение cookies для авторизации", () -> {
-            LoginRsModel cookies = AccountApi.getAuthorizationCookie();
-            store.put(COOKIES_KEY, cookies); // Сохраняем cookies в Store
-        });
 
-        step("Добавление cookies в браузер", () -> {
-            LoginRsModel cookies = store.get(COOKIES_KEY, LoginRsModel.class);
-            if (cookies != null) {
-                addCookiesToBrowser(cookies);
-            } else {
-                throw new IllegalStateException("Cookies не найдены в Store!");
-            }
-        });
+        USER_NAME = System.getProperty("userName", "login");
+        USER_PASSWORD = System.getProperty("userPassword", "password");
 
-        step("Проверка успешного входа в учетную запись", this::verifyLogin);
-    }
+        LoginRsModel authResponse = AccountApi.getAuthData(USER_NAME, USER_PASSWORD);
 
-    private void addCookiesToBrowser(LoginRsModel cookies) {
-        open("/favicon.ico"); // Открытие технической страницы для установки cookies
+        open("/favicon.ico");
 
-        addCookie("userID", cookies.getUserId());
-        addCookie("expires", cookies.getExpires());
-        addCookie("token", cookies.getToken());
-    }
+        getWebDriver().manage().addCookie(new Cookie("token", authResponse.getToken()));
+        getWebDriver().manage().addCookie(new Cookie("expires", authResponse.getExpires()));
+        getWebDriver().manage().addCookie(new Cookie("userID", authResponse.getUserId()));
 
-    private void verifyLogin() {
-        open("/profile"); // Открываем страницу профиля
-        String expectedUserName = System.getProperty("userName", "defaultUserName");
-        $("#userName-value").shouldHave(text(expectedUserName)); // Проверяем имя пользователя
-    }
-
-    private void addCookie(String name, String value) {
-        if (value != null && !value.isEmpty()) {
-            getWebDriver().manage().addCookie(new Cookie(name, value));
-        } else {
-            throw new IllegalArgumentException("Cookie " + name + " имеет некорректное значение.");
-        }
+        USER_ID = authResponse.getUserId();
+        USER_TOKEN = authResponse.getToken();
+        EXPIRES = authResponse.getExpires();
+        CREATE_DATE = authResponse.getCreatedDate();
+        IS_ACTIVE = authResponse.getIsActive();
     }
 }

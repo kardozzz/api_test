@@ -11,27 +11,19 @@ import static io.restassured.http.ContentType.JSON;
 
 public class DataSpec{
 
-public static RequestSpecification createRequestSpec = with()
-        .filter(withCustomTemplates())
-        .contentType(JSON)
-        .log().all();
+    public static final RequestSpecification requestSpec = with()
+            .filter(withCustomTemplates())
+            .contentType(JSON)
+            .log().all();
 
-public static ResponseSpecification successfulResponse201Spec = new ResponseSpecBuilder()
-        .expectStatusCode(201)
-        .log(ALL)
-        .build();
+    public static ResponseSpecification responseSpec(int statusCode){
+        return new ResponseSpecBuilder()
+                .expectStatusCode(statusCode)
+                .log(ALL)
+                .build();
+    }
 
-public static ResponseSpecification authUserResponse200Spec = new ResponseSpecBuilder()
-        .expectStatusCode(200)
-        .log(ALL)
-        .build();
-
-public static ResponseSpecification deleteBook204Spec = new ResponseSpecBuilder()
-        .expectStatusCode(204)
-        .log(ALL)
-        .build();
-public static RequestSpecification createBookStoreRequestSpec = with()
-        .filter(withCustomTemplates())
-        .log().all();
-
+    public static final ResponseSpecification responseSpec200 = responseSpec(200);
+    public static final ResponseSpecification responseSpec201 = responseSpec(201);
+    public static final ResponseSpecification responseSpec204 = responseSpec(204);
 }

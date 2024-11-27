@@ -1,4 +1,4 @@
-package com.demoqa.models;
+package com.demoqa.models.books;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +8,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 public class AddBookRqModel {
-        String userId;
-        List<IsbnModel> collectionOfIsbns;
-    }
 
+    private String userId;
+    private List<IsbnModel> collectionOfIsbns;
+}

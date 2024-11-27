@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22e42f0b-c976-4857-95c5-684f4a7cecb9" name="Changes" comment="fix">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/data/AuthData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/auth/LoginRqModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/books/AllBooksFromStoreRsModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/books/AllBooksProfileRqModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/books/AllBooksProfileRsModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/api/AccountApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/api/AccountApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/api/BookApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/api/BookApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/LoginExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/LoginExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/WithLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/helpers/extentions/WithLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/AddBookRqModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/books/AddBookRqModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/BookModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/books/BookModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/GetBookListModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/IsbnModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/books/IsbnModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/LoginRsModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/models/auth/LoginRsModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/models/LoginUserModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/ProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/specs/DataSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/specs/DataSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/BookStoreTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/BookStoreTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,27 +98,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.BookStoreTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BookStoreTests.successfulAuthorization.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BookStoreTests.successfulDeleteBookTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.api_and_ui [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.api_and_ui [runing_tests].executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BookStoreTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BookStoreTests.successfulAuthorization.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/project/api_and_ui/src/test/resources&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/project/api_and_ui/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.BookStoreTests.deleteBook.executor": "Run",
+    "Gradle.BookStoreTests.executor": "Run",
+    "Gradle.BookStoreTests.successfulAuthorization.executor": "Run",
+    "Gradle.BookStoreTests.successfulDeleteBookTest.executor": "Run",
+    "Gradle.api_and_ui [build].executor": "Run",
+    "Gradle.api_and_ui [runing_tests].executor": "Run",
+    "JUnit.BookStoreTests.executor": "Run",
+    "JUnit.BookStoreTests.successfulAuthorization.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/project/api_and_ui/src/test/resources",
+    "onboarding.tips.debug.path": "C:/project/api_and_ui/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\project\api_and_ui\src\test\resources" />
@@ -110,7 +128,7 @@
       <recent name="C:\project\api_and_ui" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.api_and_ui [runing_tests]">
+  <component name="RunManager" selected="Gradle.BookStoreTests.deleteBook">
     <configuration name="BookStoreTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -125,6 +143,30 @@
             <option value=":runing_tests" />
             <option value="--tests" />
             <option value="&quot;com.demoqa.tests.BookStoreTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="BookStoreTests.deleteBook" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":runing_tests" />
+            <option value="--tests" />
+            <option value="&quot;com.demoqa.tests.BookStoreTests.deleteBook&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -203,22 +245,6 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="BookStoreTests.deleteBookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="api_and_ui.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.demoqa.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.BookStoreTests" />
-      <option name="METHOD_NAME" value="deleteBookTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="api_and_ui.main" />
       <method v="2">
@@ -234,11 +260,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BookStoreTests.deleteBook" />
         <item itemvalue="Gradle.api_and_ui [runing_tests]" />
         <item itemvalue="Gradle.api_and_ui [build]" />
         <item itemvalue="Gradle.BookStoreTests.successfulAuthorization" />
         <item itemvalue="Gradle.BookStoreTests" />
-        <item itemvalue="JUnit.BookStoreTests.deleteBookTest" />
       </list>
     </recent_temporary>
   </component>
@@ -483,7 +509,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732562093291</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="fix">
+      <option name="closed" value="true" />
+      <created>1732619481859</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1732619481859</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

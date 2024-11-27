@@ -1,12 +1,12 @@
-package com.demoqa.models;
+package com.demoqa.models.books;
 
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
 public class IsbnModel {
-    String isbn;
+
+    private String isbn;
 }
 
