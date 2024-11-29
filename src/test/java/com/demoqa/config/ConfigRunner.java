@@ -21,7 +21,7 @@ public class ConfigRunner {
         Configuration.browserVersion = config.getBrowserVersion();
         Configuration.browserSize = config.getBrowserSize();
         Configuration.pageLoadStrategy = config.getPageLoadStrategy();
-        Configuration.timeout = config.getTimeout();
+
 
         if (config.getRemoteURL() != null) {
             Configuration.remote = config.getRemoteURL().toString();

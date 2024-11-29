@@ -1,7 +1,8 @@
 package com.demoqa.tests;
-import com.demoqa.config.ConfigRunner;
+
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import com.demoqa.config.ConfigRunner;
 import com.demoqa.helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import io.restassured.RestAssured;
